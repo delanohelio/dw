@@ -117,7 +117,7 @@ Agora, vamos ver a nossa "planta baixa" completa, com todos os elementos essenci
     * Um parágrafo `<p>` descrevendo o que você achou mais interessante na aula de hoje.
 7.  Adicione um **comentário** em HTML acima do seu `<h1>` explicando o que aquela linha faz.
 8.  Salve o arquivo e abra-o no seu navegador para ver o resultado.
-9.  Envie o arquivo `index.html` na **atividade "Tarefa - Introdução à HTML"** correspondente no Moodle.
+9.  Envie o arquivo `index.html` na **atividade "Tarefa - Introdução à HTML"** correspondente no AVEA.
 
 **⭐ Desafio (Opcional):**
 Pesquise sobre a meta tag `description` e adicione uma ao seu `<head>`, descrevendo o conteúdo da sua página.
