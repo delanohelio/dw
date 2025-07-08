@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Completo: Listas e Links</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header, footer {
+            background-color: #004d40;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        h1, h2 {
+            color: #004d40;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        ul ul {
+            margin-top: 8px;
+        }
+        dt {
+            font-weight: bold;
+            color: #1a237e;
+        }
+        dd {
+            margin-left: 0;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+        a {
+            color: #00695c;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+            margin-right: 15px;
+        }
+        footer a {
+            color: #fff;
+        }
+    </style>
+</head>
+<body id="topo">
+
+<header>
+    <h1>Guia de Receitas Clássicas</h1>
+</header>
+
+<div class="container">
+
+    <nav>
+        <h2>Navegue pelas Seções</h2>
+        <ul>
+            <li><a href="#receita-bolo">Receita de Bolo de Chocolate</a></li>
+            <li><a href="#glossario-culinario">Glossário Culinário</a></li>
+            <li><a href="#links-externos">Mais Receitas</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <section id="receita-bolo">
+        <h2>Receita de Bolo de Chocolate (Listas Ordenadas e Não-Ordenadas)</h2>
+
+        <h3>Ingredientes (Lista Não-Ordenada &lt;ul&gt;)</h3>
+        <ul>
+            <li>3 ovos</li>
+            <li>1 xícara de açúcar</li>
+            <li>2 xícaras de farinha de trigo</li>
+            <li>1 xícara de chocolate em pó</li>
+            <li>Cobertura:
+                <ul>
+                    <li>1 lata de leite condensado</li>
+                    <li>1 colher de sopa de manteiga</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Modo de Preparo (Lista Ordenada &lt;ol&gt;)</h3>
+        <ol>
+            <li>Em uma tigela, bata os ovos com o açúcar.</li>
+            <li>Misture a farinha e o chocolate em pó.</li>
+            <li>Adicione a mistura à tigela e bata bem.</li>
+            <li>Leve ao forno pré-aquecido a 180°C por 40 minutos.</li>
+            <li>Enquanto o bolo assa, prepare a cobertura.</li>
+        </ol>
+    </section>
+
+    <section id="glossario-culinario">
+        <h2>Glossário Culinário (Lista de Definição &lt;dl&gt;)</h2>
+        <dl>
+            <dt>Untar</dt>
+            <dd>Passar manteiga ou outra gordura em uma forma para evitar que o alimento grude.</dd>
+
+            <dt>Ponto de Brigadeiro</dt>
+            <dd>Momento em que a mistura do brigadeiro começa a desgrudar do fundo da panela ao incliná-la.</dd>
+        </dl>
+    </section>
+
+    <section id="links-externos">
+        <h2>Mais Receitas (Links Externos)</h2>
+        <p>
+            Para mais ideias de receitas, você pode visitar um destes sites. Lembre-se que eles abrirão em uma nova aba.
+        </p>
+        <ul>
+            <li>
+                <a href="https://www.tudogostoso.com.br/" target="_blank">TudoGostoso</a>
+            </li>
+            <li>
+                <a href="https://www.panelinha.com.br/" target="_blank">Panelinha (Rita Lobo)</a>
+            </li>
+        </ul>
+        <p>
+            Para nos enviar sua própria receita, acesse nossa <a href="pagina-de-contato.html">página de contato</a>.
+            <em>(Este link funcionaria se tivéssemos um arquivo chamado "pagina-de-contato.html" na mesma pasta.)</em>
+        </p>
+    </section>
+
+</div>
+
+<footer>
+    <p><a href="#topo">Voltar ao topo da página</a></p>
+</footer>
+
+</body>
+</html>
