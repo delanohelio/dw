@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo: Cores e Fundos em CSS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #bdc3c7;
+            padding-bottom: 10px;
+        }
+
+        /* --- Seção de Amostras de Cores --- */
+        .container-amostras {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px; /* Espaço entre os itens */
+            text-align: center;
+        }
+        .amostra {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 200px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .amostra p {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #34495e;
+        }
+
+        /* --- Seção de Fundo com Imagem (Hero Banner) --- */
+        .hero-banner {
+            height: 400px;
+            color: white;
+            padding: 20px;
+
+            /* Camada 1: Gradiente preto semi-transparente para legibilidade. */
+            /* Camada 2: Imagem de fundo. */
+            background-image:
+                    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2070');
+
+            /* Ajustes para a imagem de fundo */
+            background-size: cover; /* Faz a imagem cobrir toda a área */
+            background-position: center; /* Centraliza a imagem */
+
+            /* Usando flexbox para centralizar o conteúdo vertical e horizontalmente */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        /* --- Seção de Fundo com Gradiente --- */
+        .gradiente-showcase {
+            height: 200px;
+            padding: 20px;
+            border-radius: 8px;
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+            background-image: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+        }
+
+        /* --- Seção de Opacidade vs RGBA --- */
+        .comparacao-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            background-image: linear-gradient(45deg, #ccc 25%, transparent 25%),
+            linear-gradient(-45deg, #ccc 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, #ccc 75%),
+            linear-gradient(-45deg, transparent 75%, #ccc 75%);
+            background-size: 20px 20px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .box-comparacao {
+            width: 45%;
+            padding: 20px;
+            border: 2px solid #333;
+        }
+        .box-comparacao h3 {
+            margin-top: 0;
+        }
+        /* A propriedade 'opacity' afeta o elemento INTEIRO (incluindo o texto) */
+        .box-opacidade {
+            background-color: #2980b9;
+            opacity: 0.5;
+        }
+        /* O 'alpha' do RGBA afeta APENAS a cor do fundo */
+        .box-rgba {
+            background-color: rgba(41, 128, 185, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Exemplos de Cores e Fundos em CSS</h1>
+
+    <section>
+        <h2>Modelos de Cores</h2>
+        <div class="container-amostras">
+            <div class="amostra">
+                <div style="background-color: steelblue; height: 100px; border-radius: 4px;"></div>
+                <p>Nome: steelblue</p>
+            </div>
+            <div class="amostra">
+                <div style="background-color: #e74c3c; height: 100px; border-radius: 4px;"></div>
+                <p>HEX: #e74c3c</p>
+            </div>
+            <div class="amostra">
+                <div style="background-color: rgb(46, 204, 113); height: 100px; border-radius: 4px;"></div>
+                <p>RGB: rgb(46, 204, 113)</p>
+            </div>
+            <div class="amostra">
+                <div style="background-color: rgba(142, 68, 173, 0.7); height: 100px; border-radius: 4px;"></div>
+                <p>RGBA: rgba(..., 0.7)</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Fundo com Imagem e Overlay</h2>
+        <div class="hero-banner">
+            <h2>Um Título Sobre a Paisagem</h2>
+            <p>O texto fica perfeitamente legível sobre a imagem graças ao overlay escuro.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Fundo com Gradiente</h2>
+        <div class="gradiente-showcase">
+            <p>Este fundo é 100% CSS!</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Diferença: `opacity` vs. `RGBA`</h2>
+        <div class="comparacao-container">
+            <div class="box-comparacao box-opacidade">
+                <h3>Com `opacity: 0.5`</h3>
+                <p>Note como o texto também fica semi-transparente, dificultando a leitura.</p>
+            </div>
+            <div class="box-comparacao box-rgba">
+                <h3>Com `background-color: rgba(..., 0.5)`</h3>
+                <p>Aqui, apenas o fundo azul é afetado. O texto continua 100% visível.</p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>

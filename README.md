@@ -44,7 +44,7 @@ O cronograma está organizado por Unidades Didáticas (Bimestres).
 | Semana | Período da Semana                                | Conteúdo Programático | Atividade Prática Semanal |
 | :--- |:-------------------------------------------------| :--- | :--- |
 | 07 | [Semana de 04/08](conteudo/s07_css_box_model.md) | **CSS - Box Model:** `width`, `height`, `margin`, `padding` e `border`. | Desenvolver um layout de "cards" para praticar o Box Model. |
-| 08 | Semana de 11/08                                  | **CSS - Cores e Fundos:** Modelos de cores, opacidade, imagens e gradientes. | Criar uma página com um banner que utilize uma imagem de fundo. |
+| 08 | [Semana de 11/08](conteudo/s08_css_cores_fundos.md)                     | **CSS - Cores e Fundos:** Modelos de cores, opacidade, imagens e gradientes. | Criar uma página com um banner que utilize uma imagem de fundo. |
 | 09 | Semana de 18/08                                  | **CSS - Estilização de Texto Avançada:** Propriedades de fontes e textos. | Estilizar um artigo longo, focando na legibilidade. |
 | 10 | Semana de 25/08                                  | **CSS - Posicionamento e Display:** Propriedades `display`, `position` e `float`. | Construir um menu de navegação horizontal. |
 | 11 | Semana de 01/09                                  | **CSS - Estilizando Listas e Tabelas:** Personalização visual completa. | Criar uma tabela de preços e uma lista com estilos avançados. |
