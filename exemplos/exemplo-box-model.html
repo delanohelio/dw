@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Prático: CSS Box Model</title>
+    <style>
+        /*
+          A MELHOR PRÁTICA: BOX-SIZING
+          Esta regra garante que as propriedades 'width' e 'height'
+          incluam o padding e a border, tornando os cálculos de tamanho mais intuitivos.
+        */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef1f5;
+            color: #333;
+            margin: 0;
+            padding: 40px 20px; /* Adiciona um respiro geral na página */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /*
+          Este é um contêiner para alinhar nossos cards.
+          O 'display: flex' é um tópico futuro, mas ele nos ajuda a alinhar os
+          itens lado a lado de forma simples para este exemplo.
+        */
+        .container-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Permite que os cards quebrem a linha em telas pequenas */
+        }
+
+        /*
+          A ESTRELA DO SHOW: O CARD
+          Aqui aplicamos todo o Box Model.
+        */
+        .card {
+            /* 1. CONTENT (Conteúdo): O tamanho é controlado pelo width e height. */
+            width: 300px;
+            background-color: #ffffff;
+
+            /* 2. BORDER (Borda): A "moldura" visível do nosso card. */
+            border: 1px solid #d1d9e6;
+
+            /* 3. PADDING (Preenchimento): O espaço INTERNO, entre a borda e o conteúdo. */
+            padding: 30px;
+
+            /* 4. MARGIN (Margem): O espaço EXTERNO, entre um card e outro. */
+            margin: 15px;
+
+            /* Estilos extras para um visual mais agradável */
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+            text-align: center;
+        }
+
+        /* Estilizando os elementos DENTRO do card */
+        .card h2 {
+            margin-top: 0; /* Remove a margem padrão do h2 */
+            color: #34495e;
+        }
+
+        .card .preco {
+            font-size: 2.5rem; /* rem é uma unidade de medida responsiva */
+            font-weight: bold;
+            color: #16a085;
+            margin: 20px 0;
+        }
+
+        .card .preco span {
+            font-size: 1rem;
+            font-weight: normal;
+            color: #7f8c8d;
+        }
+
+        .card ul {
+            list-style: none; /* Remove as bolinhas da lista */
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .card ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .card ul li:last-child {
+            border-bottom: none; /* Remove a borda do último item */
+        }
+
+        /*
+          O Box Model também se aplica a botões!
+          O padding cria uma área de clique maior e mais confortável.
+        */
+        .card .botao {
+            display: inline-block;
+            background-color: #16a085;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            padding: 12px 30px; /* Padding no botão */
+            margin-top: 20px;
+        }
+
+        /* Estilização extra para o card em destaque */
+        .card-destaque {
+            border: 3px solid #16a085;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Planos de Assinatura</h1>
+
+<div class="container-cards">
+
+    <div class="card">
+        <h2>Básico</h2>
+        <p class="preco">R$ 19 <span class="mes">/mês</span></p>
+        <ul>
+            <li>1 Projeto</li>
+            <li>5GB de Armazenamento</li>
+            <li>Suporte por E-mail</li>
+        </ul>
+        <a href="#" class="botao">Assinar Agora</a>
+    </div>
+
+    <div class="card card-destaque">
+        <h2>Profissional</h2>
+        <p class="preco">R$ 49 <span class="mes">/mês</span></p>
+        <ul>
+            <li>10 Projetos</li>
+            <li>50GB de Armazenamento</li>
+            <li>Suporte Prioritário</li>
+        </ul>
+        <a href="#" class="botao">Assinar Agora</a>
+    </div>
+
+    <div class="card">
+        <h2>Corporativo</h2>
+        <p class="preco">R$ 99 <span class="mes">/mês</span></p>
+        <ul>
+            <li>Projetos Ilimitados</li>
+            <li>200GB de Armazenamento</li>
+            <li>Suporte 24/7</li>
+        </ul>
+        <a href="#" class="botao">Assinar Agora</a>
+    </div>
+
+</div>
+
+</body>
+</html>
