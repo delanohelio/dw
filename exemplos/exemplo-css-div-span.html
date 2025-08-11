@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo: Div, Span e CSS Básico</title>
+
+    <style>
+        /* Seletor de TAG: Afeta todos os elementos <body> */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Seletor de ID: Começa com #. É único. */
+        #container {
+            width: 90%;
+            max-width: 960px;
+            margin: 20px auto; /* Centraliza o container */
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        #cabecalho {
+            background-color: #4a678a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        #conteudo-principal {
+            padding: 25px;
+        }
+
+        #rodape {
+            background-color: #343a40;
+            color: #f8f9fa;
+            text-align: center;
+            padding: 15px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            font-size: 14px;
+        }
+
+        /* Seletor de CLASSE: Começa com .. Pode ser usado várias vezes. */
+        .postagem {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .destaque-azul {
+            color: #0056b3;
+            font-weight: bold;
+        }
+
+        /* Exemplo de estilização para uma segunda classe no mesmo elemento */
+        .postagem-urgente {
+            border-left: 5px solid #dc3545;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="container">
+
+    <div id="cabecalho">
+        <h1>Blog de Viagens</h1>
+        <p>Sua fonte de dicas e roteiros</p>
+    </div>
+
+    <div id="conteudo-principal">
+
+        <div class="postagem">
+            <h2>Explorando a Costa Brasileira</h2>
+            <p>
+                O Brasil tem uma costa litorânea incrível. De norte a sul, as paisagens mudam drasticamente.
+                Nesta viagem, o foco foi conhecer as praias do Nordeste, famosas por suas
+                <span class="destaque-azul">águas mornas e cristalinas</span>.
+            </p>
+        </div>
+
+        <div class="postagem postagem-urgente">
+            <h2>Dicas de Segurança para Viajantes</h2>
+            <p>
+                Segurança é fundamental. Sempre pesquise sobre seu destino e siga as recomendações locais.
+                <strong style="color: #c0392b;">Atenção:</strong> nunca deixe seus pertences desacompanhados.
+            </p>
+        </div>
+
+    </div>
+
+    <div id="rodape">
+        <p>&copy; 2025 - Blog de Viagens. Todos os direitos reservados.</p>
+    </div>
+
+</div>
+
+</body>
+</html>
