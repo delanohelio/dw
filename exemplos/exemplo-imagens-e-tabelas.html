@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo: Imagens e Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            max-width: 960px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Remove o espaço entre as bordas */
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 12px;
+            text-align: left;
+        }
+        thead {
+            background-color: #e9ecef;
+        }
+        th {
+            font-weight: bold;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f8f9fa; /* Colore linhas pares para melhor legibilidade */
+        }
+        tfoot {
+            background-color: #e9ecef;
+            font-style: italic;
+            text-align: center;
+        }
+        img {
+            vertical-align: middle; /* Alinha a imagem verticalmente com o texto */
+        }
+        .horario-table td {
+            text-align: center;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Exemplo Prático: Imagens e Tabelas</h1>
+
+    <section>
+        <h2>Tabela de Classificação - Campeonato EMI 2025</h2>
+        <p>Este exemplo demonstra uma tabela completa com `<thead>`, `<tbody>`, `<tfoot>`, imagens em células e o uso de `colspan`.</p>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Pos.</th>
+                <th>Escudo</th>
+                <th>Time</th>
+                <th>Pontos</th>
+                <th>Jogos</th>
+                <th>Vitórias</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td><img src="https://placehold.co/40x40/28a745/FFFFFF?text=C" alt="Escudo do Time Corujas" width="40" height="40"></td>
+                <td>Corujas do Agreste</td>
+                <td>12</td>
+                <td>5</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><img src="https://placehold.co/40x40/007bff/FFFFFF?text=T" alt="Escudo do Time Tubarões" width="40" height="40"></td>
+                <td>Tubarões da Costa</td>
+                <td>10</td>
+                <td>5</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><img src="https://placehold.co/40x40/dc3545/FFFFFF?text=L" alt="Escudo do Time Leões" width="40" height="40"></td>
+                <td>Leões da Mata Sul</td>
+                <td>7</td>
+                <td>5</td>
+                <td>2</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="6">Dados atualizados em: 11 de Agosto de 2025.</td>
+            </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section>
+        <h2>Horário de Aulas (Exemplo com `rowspan`)</h2>
+        <p>Este exemplo foca em como usar `rowspan` para mesclar células verticalmente.</p>
+        <table class="horario-table">
+            <thead>
+            <tr>
+                <th>Horário</th>
+                <th>Atividade</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>09:00 - 10:00</td>
+                <td>Aula de HTML</td>
+            </tr>
+            <tr>
+                <td rowspan="2">10:00 - 10:30</td>
+                <td rowspan="2">Intervalo</td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <td>10:30 - 11:30</td>
+                <td>Aula de CSS</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+</div>
+</body>
+</html>

@@ -28,15 +28,15 @@ O cronograma está organizado por Unidades Didáticas (Bimestres).
 ### **2ª Unidade Didática (16/05 a 01/08)**
 *Foco: Fundamentos de HTML e Início de CSS*
 
-| Semana | Período da Semana                                  | Conteúdo Programático | Atividade Prática Semanal |
-| :--- |:---------------------------------------------------| :--- | :--- |
-| 01 | Semana de 16/06                                    | **Introdução à Web:** Como a web funciona e as ferramentas que usaremos. | Preparar o ambiente de desenvolvimento. |
-| 02 | [Semana de 23/06](conteudo/s02_introducao_html.md) | **Estrutura HTML:** Tags essenciais (`<html>`, `<head>`, `<body>`), elementos e atributos. | Criar a estrutura básica de um arquivo HTML. |
-| 03 | [Semana de 30/06](conteudo/s03_elementos_html.md)  | **Texto em HTML:** Títulos, parágrafos, negrito, itálico e outras tags de formatação. | Desenvolver uma página simples contendo apenas texto. |
-| 04 | [Semana de 07/07](conteudo/s04_listas_e_links.md)  | **Listas e Links:** Criação de listas ordenadas, não-ordenadas, e inserção de links. | Criar uma página de receitas utilizando listas e links. |
-| -- | **14/07 a 18/07**                                  | [cite_start]**RECESSO ESCOLAR** [cite: 604] | **Sem atividades. Bom descanso!** |
-| 05 | Semana de 21/07                                    | **Imagens e Tabelas:** Inserir imagens e estruturar dados com tabelas. | Montar uma página com uma foto e uma tabela de horários. |
-| 06 | Semana de 28/07                                    | **HTML e CSS Básico:** `<div>`, `<span>`, `id`, `class` e introdução aos seletores CSS. | Organizar uma página com `divs` e aplicar os primeiros estilos. |
+| Semana | Período da Semana                                    | Conteúdo Programático                                                                      | Atividade Prática Semanal |
+| :--- |:-----------------------------------------------------|:-------------------------------------------------------------------------------------------| :--- |
+| 01 | Semana de 16/06                                      | **Introdução à Web:** Como a web funciona e as ferramentas que usaremos.                   | Preparar o ambiente de desenvolvimento. |
+| 02 | [Semana de 23/06](conteudo/s02_introducao_html.md)   | **Estrutura HTML:** Tags essenciais (`<html>`, `<head>`, `<body>`), elementos e atributos. | Criar a estrutura básica de um arquivo HTML. |
+| 03 | [Semana de 30/06](conteudo/s03_elementos_html.md)    | **Texto em HTML:** Títulos, parágrafos, negrito, itálico e outras tags de formatação.      | Desenvolver uma página simples contendo apenas texto. |
+| 04 | [Semana de 07/07](conteudo/s04_listas_e_links.md)    | **Listas e Links:** Criação de listas ordenadas, não-ordenadas, e inserção de links.       | Criar uma página de receitas utilizando listas e links. |
+| -- | **14/07 a 18/07**                                    | **RECESSO ESCOLAR**                                                                        | **Sem atividades. Bom descanso!** |
+| 05 | [Semana de 21/07](conteudo/s05_imagens_e_tabelas.md) | **Imagens e Tabelas:** Inserir imagens e estruturar dados com tabelas.                     | Montar uma página com uma foto e uma tabela de horários. |
+| 06 | Semana de 28/07                                      | **HTML e CSS Básico:** `<div>`, `<span>`, `id`, `class` e introdução aos seletores CSS.    | Organizar uma página com `divs` e aplicar os primeiros estilos. |
 
 ### **3ª Unidade Didática (04/08 a 08/10)**
 *Foco: Aprofundamento em CSS e Projeto Estático*
