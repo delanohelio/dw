@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo: Tipografia na Web</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Definindo uma base para o cálculo de 'rem' e aplicando box-sizing */
+        html {
+            font-size: 16px; /* 1rem = 16px */
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+        /* PASSO 2: APLICAR AS FONTES NO CSS
+          Configurações globais de tipografia para o corpo do texto.
+        */
+        body {
+            /* font-family: A fonte principal é 'Lato'. Se falhar, usa qualquer sans-serif. */
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem; /* Tamanho base do texto (16px) */
+            font-weight: 400; /* Peso normal da fonte */
+
+            /* line-height: Essencial para legibilidade! 1.6 é um bom valor. */
+            line-height: 1.6;
+
+            color: #333;
+            background-color: #fdfdfd;
+        }
+
+        /* Container para limitar a largura do texto e centralizá-lo */
+        .container {
+            max-width: 750px; /* Linhas muito longas são difíceis de ler */
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        /* Estilizando os títulos com a fonte 'Playfair Display' */
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700; /* Negrito */
+            color: #2c3e50;
+            line-height: 1.2; /* Títulos podem ter um line-height menor */
+        }
+
+        h1 {
+            font-size: 3rem; /* 48px */
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem; /* 32px */
+            border-bottom: 2px solid #efefef;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        /* Estilizando parágrafos */
+        p {
+            margin-bottom: 1.2rem;
+            /* text-align: justify; Deixa as margens retas, como em um livro */
+            text-align: justify;
+        }
+
+        /* Estilizando links para serem mais sutis */
+        a {
+            color: #2980b9;
+            font-weight: 700; /* Deixa o link em negrito */
+            /* text-decoration: remove o sublinhado padrão */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
+        }
+
+        /* Demonstração de text-transform */
+        .exemplo-transform {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        .exemplo-transform span {
+            /* text-transform: Muda a capitalização */
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>A Importância da Tipografia no Design Web</h1>
+
+    <p>A tipografia é muito mais do que simplesmente escolher uma fonte bonita. É a base da comunicação em um site, influenciando diretamente a legibilidade, a experiência do usuário e a percepção da marca. Um bom design tipográfico guia o leitor, cria uma hierarquia visual clara e estabelece o tom da mensagem.</p>
+
+    <p>Ao definir a tipografia de um projeto, é crucial considerar a combinação de fontes. Geralmente, uma fonte elegante e com personalidade, como a <strong>Playfair Display</strong> usada nos títulos desta página, é pareada com uma fonte limpa e altamente legível para o corpo do texto, como a fonte <strong>Lato</strong> que você está lendo agora.</p>
+
+    <h2>Legibilidade é a Chave</h2>
+
+    <p>Três fatores principais contribuem para uma boa legibilidade: o tamanho da fonte (`font-size`), o peso da fonte (`font-weight`) e, talvez o mais importante, a altura da linha (`line-height`). Um `line-height` generoso, como o de `1.6` aplicado aqui, cria um espaço confortável entre as linhas, evitando que o texto pareça denso e cansativo. Para saber mais, você pode visitar este <a href="#">artigo de exemplo</a>.</p>
+
+    <p class="exemplo-transform">
+        CSS oferece controle total com a propriedade <span>text-transform</span>.
+    </p>
+
+</div>
+
+</body>
+</html>
