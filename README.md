@@ -47,7 +47,7 @@ O cronograma está organizado por Unidades Didáticas (Bimestres).
 | 08 | [Semana de 11/08](conteudo/s08_css_cores_fundos.md) | **CSS - Cores e Fundos:** Modelos de cores, opacidade, imagens e gradientes. | Criar uma página com um banner que utilize uma imagem de fundo. |
 | 09 | [Semana de 18/08](conteudo/s09_css_tipografia.md)   | **CSS - Estilização de Texto Avançada:** Propriedades de fontes e textos. | Estilizar um artigo longo, focando na legibilidade. |
 | 10 | [Semana de 25/08](conteudo/s10_css_seletores.md)    | **CSS - Posicionamento e Display:** Propriedades `display`, `position` e `float`. | Construir um menu de navegação horizontal. |
-| 11 | Semana de 01/09                                     | **CSS - Estilizando Listas e Tabelas:** Personalização visual completa. | Criar uma tabela de preços e uma lista com estilos avançados. |
+| 11 | [Semana de 01/09](conteudo/s11_css_position.md)                                 | **CSS - Dominando o Posicionamento de Elementos**  | Criar um layout de página simples que utiliza um cabeçalho fixo e um "selo" de notificação sobreposto |
 | 12 | Semana de 08/09                                     | **CSS - Tópicos Avançados:** Sombras, bordas arredondadas e pseudo-classes. | Adicionar efeitos de sombra e bordas aos elementos de uma página. |
 | 13 | Semana de 15/09                                     | **Revisão Geral de HTML & CSS** | Lista de exercícios de consolidação. |
 | 14 | Semana de 22/09                                     | **Início do Projeto Prático (HTML & CSS):** Planejamento e Estrutura HTML. | Entregar o wireframe e o HTML do projeto da unidade. |

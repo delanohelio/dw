@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo: Posicionamento em CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            /* Adicionando padding no topo para compensar o header fixo */
+            padding-top: 70px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+        h1, h2, h3 { color: #153e7c; }
+        .demo-box {
+            border: 2px dashed #95a5a6;
+            padding: 20px;
+            margin-top: 20px;
+            min-height: 250px;
+        }
+
+        /* --- Exemplo 1: POSITION: FIXED --- */
+        .header-fixo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #153e7c;
+            color: white;
+            padding: 15px 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 100; /* Um z-index alto garante que ele fique na frente */
+        }
+
+        /* --- Exemplo 2: POSITION: STICKY --- */
+        .menu-sticky {
+            position: sticky;
+            /* Vai "grudar" no topo quando o scroll atingir 70px (altura do header fixo) */
+            top: 70px;
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            z-index: 99;
+        }
+
+        /* --- Exemplo 3: RELATIVE + ABSOLUTE + Z-INDEX --- */
+        .box-pai-relativo {
+            position: relative; /* CRUCIAL! Cria o contexto de posicionamento. */
+            background-color: #ecf0f1;
+            height: 350px;
+        }
+        .box-filho-absoluto {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            padding: 10px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Posicionando os filhos absolutos dentro do pai relativo */
+        .canto-superior {
+            background-color: #e74c3c; /* Vermelho */
+            top: 20px;
+            right: 20px;
+        }
+        .canto-inferior {
+            background-color: #2ecc71; /* Verde */
+            bottom: 20px;
+            left: 20px;
+            z-index: 2; /* Este tem z-index maior, ficará na frente */
+        }
+        .sobreposto {
+            background-color: #f1c40f; /* Amarelo */
+            bottom: 40px;
+            left: 70px;
+            z-index: 1; /* Este tem z-index menor, ficará atrás do verde */
+        }
+
+        /* --- Exemplo 4: Botão "Voltar ao Topo" Fixo --- */
+        .voltar-ao-topo {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #153e7c;
+            color: white;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 24px;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header-fixo">
+    <h2>Header com `position: fixed`</h2>
+</header>
+
+<a href="#" class="voltar-ao-topo" title="Voltar ao Topo">↑</a>
+
+<main class="container">
+    <h1>Exemplos de Posicionamento em CSS</h1>
+    <p>Role a página para ver os efeitos de `fixed` e `sticky` em ação.</p>
+
+    <section>
+        <h2>`position: sticky`</h2>
+        <p>O menu azul abaixo vai rolar normalmente com a página até atingir o topo, onde ficará "grudado".</p>
+    </section>
+</main>
+
+<nav class="menu-sticky">
+    Menu com `position: sticky`
+</nav>
+
+<div class="container">
+    <section>
+        <h2>`position: relative` e `position: absolute`</h2>
+        <p>O contêiner cinza abaixo tem <code>position: relative</code>. As caixas coloridas dentro dele têm <code>position: absolute</code> e se posicionam em relação a ele, ignorando o fluxo normal do documento.</p>
+        <div class="demo-box box-pai-relativo">
+            <p style="padding: 10px;">Este é um texto normal dentro do contêiner. Note como as caixas absolutas não o empurram e podem até passar por cima dele.</p>
+
+            <div class="box-filho-absoluto canto-superior">
+                <code>top: 20px; right: 20px;</code>
+            </div>
+
+            <div class="box-filho-absoluto canto-inferior">
+                <code>bottom: 20px; left: 20px; z-index: 2;</code>
+            </div>
+
+            <div class="box-filho-absoluto sobreposto">
+                <code>z-index: 1;</code>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Conteúdo de Preenchimento</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus.</p>
+        <p>Quisque porta. Vestibulum est. Praesent wisi accumsan lorem. Nunc sed pede. Praesent vitae pede. In hac habitasse platea dictumst. Vestibulum nonummy. Proin nonummy. Donec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus nibh. Fusce ut velit. Nunc mollis, eros ut laoreet egestas, erat diam venenatis eros, et luctus velit urna non nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc porta. Ut vobis partum. In in neque. Aliquam erat volutpat. Nam web. Quisque id erat.</p>
+    </section>
+</div>
+
+</body>
+</html>
