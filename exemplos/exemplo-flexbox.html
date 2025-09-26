@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Prático: CSS Flexbox</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+        }
+        .container { max-width: 900px; margin: 20px auto; padding: 0 20px; }
+        h1, h2, h3 { color: #2c3e50; }
+        h2 { border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-top: 40px; }
+        h3 { background-color: #ecf0f1; padding: 5px 10px; border-radius: 4px; font-family: 'Courier New', monospace;}
+        code { background-color: #eee; padding: 2px 5px; border-radius: 4px; }
+
+        /* --- Estilos base para os exemplos --- */
+        .flex-container {
+            display: flex; /* A MÁGICA COMEÇA AQUI! */
+            background-color: #ecf0f1;
+            border: 2px solid #bdc3c7;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .flex-item {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            margin: 5px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* --- 1. Demonstração do justify-content --- */
+        .jc-start { justify-content: flex-start; }
+        .jc-end { justify-content: flex-end; }
+        .jc-center { justify-content: center; }
+        .jc-between { justify-content: space-between; }
+        .jc-around { justify-content: space-around; }
+
+        /* --- 2. Demonstração do align-items --- */
+        .demo-align {
+            height: 150px; /* Altura necessária para ver o alinhamento vertical */
+        }
+        .ai-start { align-items: flex-start; }
+        .ai-end { align-items: flex-end; }
+        .ai-center { align-items: center; }
+        .ai-stretch { align-items: stretch; }
+        /* Itens com alturas diferentes para a demo */
+        .item-small { padding-top: 10px; padding-bottom: 10px; }
+        .item-large { padding-top: 30px; padding-bottom: 30px; }
+
+        /* --- 3. Demonstração do flex-wrap e flex dos itens --- */
+        .demo-wrap {
+            flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+            gap: 10px; /* Adiciona espaço entre os itens */
+        }
+        .item-responsivo {
+            /* flex: grow shrink basis; */
+            /* Ele tenta ter 200px, mas pode crescer e encolher */
+            flex: 1 1 200px;
+        }
+
+        /* --- 4. Exemplo prático: Navbar --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between; /* Logo no início, menu no final */
+            align-items: center; /* Centraliza verticalmente */
+            background-color: #2c3e50;
+            padding: 15px 30px;
+            border-radius: 5px;
+        }
+        .navbar .logo { font-size: 1.5rem; color: white; font-weight: bold; }
+        .navbar ul { display: flex; list-style: none; margin: 0; padding: 0; gap: 20px; }
+        .navbar a { color: white; text-decoration: none; }
+        .navbar a:hover { color: #3498db; }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Flexbox Playground</h1>
+
+    <section>
+        <h2>1. <code>justify-content</code>: Alinhamento no Eixo Principal</h2>
+        <h3><code>justify-content: flex-start;</code> (Padrão)</h3>
+        <div class="flex-container jc-start"><div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div></div>
+        <h3><code>justify-content: center;</code></h3>
+        <div class="flex-container jc-center"><div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div></div>
+        <h3><code>justify-content: space-between;</code></h3>
+        <div class="flex-container jc-between"><div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div></div>
+    </section>
+
+    <section>
+        <h2>2. <code>align-items</code>: Alinhamento no Eixo Transversal</h2>
+        <h3><code>align-items: flex-start;</code></h3>
+        <div class="flex-container demo-align ai-start"><div class="flex-item item-small">1</div><div class="flex-item item-large">2</div><div class="flex-item">3</div></div>
+        <h3><code>align-items: center;</code> (Alinhamento Vertical!)</h3>
+        <div class="flex-container demo-align ai-center"><div class="flex-item item-small">1</div><div class="flex-item item-large">2</div><div class="flex-item">3</div></div>
+        <h3><code>align-items: stretch;</code> (Padrão)</h3>
+        <div class="flex-container demo-align ai-stretch"><div class="flex-item item-small">1</div><div class="flex-item item-large">2</div><div class="flex-item">3</div></div>
+    </section>
+
+    <section>
+        <h2>3. <code>flex-wrap</code> e Responsividade</h2>
+        <p>Redimensione a janela do navegador para ver os itens se ajustarem e quebrarem a linha!</p>
+        <div class="flex-container demo-wrap">
+            <div class="flex-item item-responsivo">Item 1</div><div class="flex-item item-responsivo">Item 2</div>
+            <div class="flex-item item-responsivo">Item 3</div><div class="flex-item item-responsivo">Item 4</div>
+            <div class="flex-item item-responsivo">Item 5</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Exemplo Prático: Barra de Navegação</h2>
+        <nav class="navbar">
+            <div class="logo">MeuSite</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </section>
+
+</div>
+</body>
+</html>
